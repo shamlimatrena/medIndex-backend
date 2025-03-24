@@ -4,7 +4,7 @@ This is a simple project where visitor can search and view a list of medicines i
 ## Steps to run the project locally
 - system must have python & pip installed
 - clone the repository, go to project directory, run following commads sequentially
-- `pip cache purge`
+- `pip cache purge` -> To avoid any cache complicacy
 - `rm -rf venv`  -> Deletes the virtual environment
 - `python -m venv venv`  -> Recreate the virtual environment
 - `source venv/bin/activate`  -> Activate it (Mac/Linux)
