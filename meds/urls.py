@@ -9,4 +9,5 @@ router.register(r'meds', MedViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('login/', LoginView.as_view(), name='login'),
+    path('health/', include('api.urls')),
 ]
