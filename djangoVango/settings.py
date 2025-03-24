@@ -41,7 +41,7 @@ BASE_DIR = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SECRET_KEY = 'django-insecure-fy=v+_q4yfk!c_!wngxj9f14bbqywutbah)im&bs0zcsmwzscv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['medindex-backend.onrender.com', '127.0.0.1', 'localhost']
 
