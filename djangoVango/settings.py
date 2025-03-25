@@ -112,10 +112,18 @@ INTERNAL_IPS = [
     # ...
 ]
 
-DATABASES = {
-    "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
-}
-
+# Check if running in production or development
+if os.getenv("DJANGO_ENV") != "local":
+    DATABASES = {
+        "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
+    }
+else:
+    DATABASES = {
+        "default": {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
