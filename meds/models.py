@@ -44,18 +44,6 @@ class Med(models.Model):
 
 @receiver(post_delete, sender=Med)
 def delete_cloudinary_image(sender, instance, **kwargs):
-
-
-
-
-
-
-
-
-
-
-
-
     """
     Delete image from Cloudinary when model instance is deleted
     """
